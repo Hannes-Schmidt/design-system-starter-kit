@@ -41,3 +41,90 @@ $static-font-path: '/assets/fonts/webfonts';
   left: 0;
 }
 
+/*Font Sizes*/
+p, span, label{
+  font-size: 13px!important;
+}
+
+#f42-quote-settings_changed {
+  background-color: #0dc2d9;
+  border-radius: 5px;
+}
+
+#f42-quote-settings_changed svg {
+  fill: #ffffff;
+}
+
+#f42-quote-settings_changed .slds-form-element__label {
+  color: #fff;
+}
+
+.f42-quote-settings_changed {
+  background-color: #0dc2d9;
+  border-radius: 5px;
+}
+
+.f42-quote-settings_changed svg {
+  fill: #ffffff;
+  display:none;
+}
+
+.f42-quote-settings_changed .slds-form-element__label {
+  color: #fff; 
+}
+
+
+.slds-checkbox_faux_container .slds-checkbox_on {
+  display: none !important;
+}
+
+.slds-checkbox_faux_container .slds-checkbox_off {
+  display: none !important;
+}
+
+.slds-checkbox_toggle [type="checkbox"]:checked+.slds-checkbox_faux_container .slds-checkbox_faux {
+  background-color: #4bca81 !important;
+  border-color: #4bca81 !important;
+}
+
+.slds-checkbox .slds-checkbox_faux,
+.slds-checkbox .slds-checkbox--faux {
+  //border-color:red;
+  border-radius: 1rem;
+}
+
+.slds-checkbox [type="checkbox"]:checked+.slds-checkbox_faux:after,
+.slds-checkbox [type="checkbox"]:checked+.slds-checkbox--faux:after,
+.slds-checkbox [type="checkbox"]:checked~.slds-checkbox_faux:after,
+.slds-checkbox [type="checkbox"]:checked~.slds-checkbox--faux:after,
+.slds-checkbox [type="checkbox"]:checked+.slds-checkbox__label .slds-checkbox_faux:after,
+.slds-checkbox [type="checkbox"]:checked+.slds-checkbox__label .slds-checkbox--faux:after {
+  border-bottom: 2px solid #4bca81 !important;
+  border-left: 2px solid #4bca81 !important;
+}
+
+/*CustomSettings Bubble*/
+.slds-grid .slds-text-align_right svg {
+  display: none;
+}
+
+.CustomSettings_savebubble .slds-text-align_right svg {
+  display: block;
+}
+
+/*Checkbox for selecting Modified Changes*/
+.checkbox_showmodified{
+  display: none;
+}
+.checkbox_showmodified__on{
+  display: block!important;
+}
+
+/*Select Width*/
+.slds-select_container{
+  width: 40%;
+}
+
+.slds-input{
+  width: 40%;
+}

@@ -1,0 +1,1988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salesforce Lightning Design System Starter Kit</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+
+<body>
+  <!--
+    Base Global Header component
+    https://www.lightningdesignsystem.com/components/global-header/
+  -->
+
+  <header class="slds-global-header_container">
+    <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text_focus">Skip to Navigation</a>
+    <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text_focus">Skip to Main Content</a>
+    <div class="slds-global-header slds-grid slds-grid_align-spread">
+      <div class="slds-global-header__item">
+        <div class="slds-global-header__logo"></div>
+      </div>
+      <div class="slds-global-header__item slds-global-header__item_search">
+        <div class="slds-form-element">
+          <label class="slds-form-element__label slds-assistive-text" for="combobox-id-1">Search Salesforce</label>
+          <div class="slds-form-element__control">
+            <div class="slds-combobox-group">
+              <div class="slds-combobox_object-switcher slds-combobox-addon_start">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label slds-assistive-text" for="objectswitcher-combobox-id-1">Filter
+                    Search by:</label>
+                  <div class="slds-form-element__control">
+                    <div class="slds-combobox_container">
+                      <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+                        aria-controls="primary-search-combobox-id-1" aria-expanded="false" aria-haspopup="listbox"
+                        role="combobox">
+                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                          role="none">
+                          <input type="text" class="slds-input slds-combobox__input slds-combobox__input-value"
+                            id="objectswitcher-combobox-id-1" aria-controls="objectswitcher-listbox-id-1"
+                            autoComplete="off" role="textbox" placeholder=" " value="Accounts" />
+                          <span
+                            class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right">
+                            <svg class="slds-icon slds-icon slds-icon_xx-small slds-icon-text-default"
+                              aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                            </svg>
+                          </span>
+                        </div>
+                        <div id="objectswitcher-listbox-id-1"
+                          class="slds-dropdown slds-dropdown_length-5 slds-dropdown_x-small slds-dropdown_left"
+                          role="listbox">
+                          <ul class="slds-listbox slds-listbox_vertical" role="group" aria-label="Suggested for you">
+                            <li role="presentation" class="slds-listbox__item">
+                              <div id="object0"
+                                class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                role="presentation">
+                                <h3 class="slds-text-title_caps" role="presentation">Suggested for you</h3>
+                              </div>
+                            </li>
+                            <li role="presentation" class="slds-listbox__item">
+                              <div id="object1"
+                                class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
+                                role="option">
+                                <span class="slds-media__figure">
+                                  <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+                                    aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                </span>
+                                <span class="slds-media__body">
+                                  <span class="slds-truncate" title="Accounts">
+                                    <span class="slds-assistive-text">Current Selection:</span> Accounts</span>
+                                </span>
+                              </div>
+                            </li>
+                            <li role="presentation" class="slds-listbox__item">
+                              <div id="object2"
+                                class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                role="option">
+                                <span class="slds-media__figure">
+                                  <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+                                    aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                </span>
+                                <span class="slds-media__body">
+                                  <span class="slds-truncate" title="Reports"> Reports</span>
+                                </span>
+                              </div>
+                            </li>
+                            <li role="presentation" class="slds-listbox__item">
+                              <div id="object3"
+                                class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                role="option">
+                                <span class="slds-media__figure">
+                                  <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+                                    aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                </span>
+                                <span class="slds-media__body">
+                                  <span class="slds-truncate" title="Contacts"> Contacts</span>
+                                </span>
+                              </div>
+                            </li>
+                            <li role="presentation" class="slds-listbox__item">
+                              <div id="object4"
+                                class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                role="option">
+                                <span class="slds-media__figure">
+                                  <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+                                    aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                </span>
+                                <span class="slds-media__body">
+                                  <span class="slds-truncate" title="Files"> Files</span>
+                                </span>
+                              </div>
+                            </li>
+                            <li role="presentation" class="slds-listbox__item">
+                              <div id="object5"
+                                class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                role="option">
+                                <span class="slds-media__figure">
+                                  <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+                                    aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                </span>
+                                <span class="slds-media__body">
+                                  <span class="slds-truncate" title="Groups"> Groups</span>
+                                </span>
+                              </div>
+                            </li>
+                            <li role="presentation" class="slds-listbox__item">
+                              <div id="object6"
+                                class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                role="option">
+                                <span class="slds-media__figure">
+                                  <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+                                    aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                </span>
+                                <span class="slds-media__body">
+                                  <span class="slds-truncate" title="Leads"> Leads</span>
+                                </span>
+                              </div>
+                            </li>
+                            <li role="presentation" class="slds-listbox__item">
+                              <div id="object7"
+                                class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                role="option">
+                                <span class="slds-media__figure">
+                                  <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+                                    aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                </span>
+                                <span class="slds-media__body">
+                                  <span class="slds-truncate" title="Notes"> Notes</span>
+                                </span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-combobox_container slds-combobox-addon_end">
+                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false"
+                  aria-haspopup="listbox" id="primary-search-combobox-id-1" role="combobox">
+                  <div
+                    class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left slds-global-search__form-element"
+                    role="none">
+                    <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_left">
+                      <svg class="slds-icon slds-icon slds-icon_xx-small slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                      </svg>
+                    </span>
+                    <input type="text" class="slds-input slds-combobox__input" id="combobox-id-1"
+                      aria-autocomplete="list" aria-controls="search-listbox-id-1" autoComplete="off" role="textbox"
+                      placeholder="Search Salesforce" />
+                  </div>
+                  <div id="search-listbox-id-1"
+                    class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
+                    <ul class="slds-listbox slds-listbox_vertical" role="group" aria-label="Recent Items">
+                      <li role="presentation" class="slds-listbox__item">
+                        <div id="option0"
+                          class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_center"
+                          role="presentation">
+                          <h3 class="slds-text-title_caps" role="presentation">Recent Items</h3>
+                        </div>
+                      </li>
+                      <li role="presentation" class="slds-listbox__item">
+                        <div id="option1"
+                          class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                          role="option">
+                          <span class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-opportunity">
+                              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"></use>
+                              </svg>
+                            </span>
+                          </span>
+                          <span class="slds-media__body">
+                            <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce - 1,000
+                              Licenses</span>
+                            <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Opportunity •
+                              Propecting</span>
+                          </span>
+                        </div>
+                      </li>
+                      <li role="presentation" class="slds-listbox__item">
+                        <div id="option2"
+                          class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                          role="option">
+                          <span class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-contact">
+                              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#contact"></use>
+                              </svg>
+                            </span>
+                          </span>
+                          <span class="slds-media__body">
+                            <span class="slds-listbox__option-text slds-listbox__option-text_entity">Art Vandelay</span>
+                            <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Contact •
+                              avandelay@vandelay.com</span>
+                          </span>
+                        </div>
+                      </li>
+                      <li role="presentation" class="slds-listbox__item">
+                        <div id="option3"
+                          class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                          role="option">
+                          <span class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-account">
+                              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                              </svg>
+                            </span>
+                          </span>
+                          <span class="slds-media__body">
+                            <span class="slds-listbox__option-text slds-listbox__option-text_entity">Vandelay
+                              Industries</span>
+                            <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San
+                              Francisco</span>
+                          </span>
+                        </div>
+                      </li>
+                      <li role="presentation" class="slds-listbox__item">
+                        <div id="option4"
+                          class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                          role="option">
+                          <span class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-event">
+                              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#event"></use>
+                              </svg>
+                            </span>
+                          </span>
+                          <span class="slds-media__body">
+                            <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce UK 2016
+                              Events</span>
+                            <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Event •
+                              $20,000</span>
+                          </span>
+                        </div>
+                      </li>
+                      <li role="presentation" class="slds-listbox__item">
+                        <div id="option5"
+                          class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                          role="option">
+                          <span class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-lead">
+                              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#lead"></use>
+                              </svg>
+                            </span>
+                          </span>
+                          <span class="slds-media__body">
+                            <span class="slds-listbox__option-text slds-listbox__option-text_entity">H.E.
+                              Pennypacker</span>
+                            <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Lead •
+                              Nursing</span>
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slds-global-header__item">
+        <ul class="slds-global-actions">
+          <li class="slds-global-actions__item">
+            <div class="slds-global-actions__favorites slds-dropdown-trigger slds-dropdown-trigger_click">
+              <div class="slds-button-group">
+                <button
+                  class="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small"
+                  aria-pressed="false" title="Toggle Favorites">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#favorite"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Toggle Favorite</span>
+                </button>
+                <button
+                  class="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
+                  title="View Favorites">
+                  <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                  </svg>
+                  <span class="slds-assistive-text">View Favorites</span>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="slds-global-actions__item">
+            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+              <button
+                class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action"
+                aria-haspopup="true" title="Global Actions">
+                <svg class="slds-button__icon" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+                </svg>
+                <span class="slds-assistive-text">Global Actions</span>
+              </button>
+            </div>
+          </li>
+          <li class="slds-global-actions__item">
+            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+              <button
+                class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action"
+                aria-haspopup="true" title="Help and Training">
+                <svg class="slds-button__icon slds-global-header__icon" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#question"></use>
+                </svg>
+                <span class="slds-assistive-text">Help and Training</span>
+              </button>
+            </div>
+          </li>
+          <li class="slds-global-actions__item">
+            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+              <button
+                class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action"
+                aria-haspopup="true" title="Setup">
+                <svg class="slds-button__icon slds-global-header__icon" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#setup"></use>
+                </svg>
+                <span class="slds-assistive-text">Setup</span>
+              </button>
+            </div>
+          </li>
+          <li class="slds-global-actions__item">
+            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+              <button
+                class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
+                title="no new notifications" aria-live="assertive" aria-atomic="true">
+                <svg class="slds-button__icon slds-global-header__icon" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#notification"></use>
+                </svg>
+                <span class="slds-assistive-text">no new notifications</span>
+              </button>
+              <span aria-hidden="true" class="slds-notification-badge">0</span>
+            </div>
+          </li>
+          <li class="slds-global-actions__item">
+            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+              <button class="slds-button slds-global-actions__avatar slds-global-actions__item-action"
+                title="person name" aria-haspopup="true">
+                <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
+                  <img alt="Person name" src="/assets/images/avatar2.jpg" title="User avatar" />
+                </span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!--
+    Placeholder to push the context bar down
+  -->
+  <div class="app-header-placeholder"></div>
+
+  <!--
+    Navigation Bar component
+    https://www.lightningdesignsystem.com/components/global-navigation/
+  -->
+  <div style="height: 16rem;">
+    <div class="slds-context-bar">
+      <div class="slds-context-bar__primary">
+        <div
+          class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+          <div class="slds-context-bar__icon-action">
+            <button class="slds-button slds-icon-waffle_container slds-context-bar__button"
+              title="Description of the icon when needed">
+              <span class="slds-icon-waffle">
+                <span class="slds-r1"></span>
+                <span class="slds-r2"></span>
+                <span class="slds-r3"></span>
+                <span class="slds-r4"></span>
+                <span class="slds-r5"></span>
+                <span class="slds-r6"></span>
+                <span class="slds-r7"></span>
+                <span class="slds-r8"></span>
+                <span class="slds-r9"></span>
+              </span>
+              <span class="slds-assistive-text">Open App Launcher</span>
+            </button>
+          </div>
+          <span class="slds-context-bar__label-action slds-context-bar__app-name">
+            <span class="slds-truncate" title="App Name">quote mockup</span>
+          </span>
+        </div>
+      </div>
+      <nav class="slds-context-bar__secondary" role="navigation">
+        <ul class="slds-grid">
+          <li class="slds-context-bar__item slds-is-active">
+            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
+              <span class="slds-assistive-text">Current Page:</span>
+              <span class="slds-truncate" title="Home">Home</span>
+            </a>
+          </li>
+          <li
+            class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover">
+            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
+              <span class="slds-truncate" title="Menu Item">Groups</span>
+            </a>
+            <div class="slds-context-bar__icon-action slds-p-left_none">
+              <button class="slds-button slds-button_icon slds-button_icon slds-context-bar__button"
+                aria-haspopup="true" title="Open menu item submenu">
+                <svg class="slds-button__icon" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                </svg>
+                <span class="slds-assistive-text">Open menu item submenu</span>
+              </button>
+            </div>
+            <div class="slds-dropdown slds-dropdown_right">
+              <ul class="slds-dropdown__list" role="menu">
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate" title="Main action">
+                      <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+                        aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+                      </svg>Main action</span>
+                  </a>
+                </li>
+                <li class="slds-dropdown__header slds-has-divider_top-space" role="separator">
+                  <span class="slds-text-title_caps">Menu header</span>
+                </li>
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate" title="Menu Item One">Contacts</span>
+                  </a>
+                </li>
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate" title="Menu Item Two">Files</span>
+                  </a>
+                </li>
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate" title="Menu Item Three">Chat</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="slds-context-bar__item">
+            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
+              <span class="slds-truncate" title="Menu Item">Menu Item</span>
+            </a>
+          </li>
+          <li class="slds-context-bar__item">
+            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
+              <span class="slds-truncate" title="Menu Item">Menu Item</span>
+            </a>
+          </li>
+          <li class="slds-context-bar__item">
+            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
+              <span class="slds-truncate" title="Menu Item">Menu Item</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <main class="app-wrapper slds-template_default">
+
+
+
+
+    <div class="demo-only" style="height:12rem">
+
+      <div class="slds-grid slds-wrap">
+        <div class="slds-tabs_default slds-col slds-grid slds-wrap" style="align-items: flex-end; border-radius: 5px;">
+
+          <div class="slds-col slds-size_3-of-4 slds-p-around_small">
+            <h2 class="slds-page-header__title">Properties</h2>
+          </div>
+
+          <div class="slds-col slds-size_1-of-4 slds-p-around_small">
+            <div style="">
+              <div class="slds-form-element">
+                <!-- <label class="slds-form-element__label" for="combobox-id-1">Relate to</label>-->
+                <div class="slds-form-element__control">
+                  <div class="slds-combobox_container">
+                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false"
+                      aria-haspopup="listbox" role="combobox">
+                      <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                        role="none">
+                        <input type="text" class="slds-input slds-combobox__input" id="combobox-id-1"
+                          aria-autocomplete="list" aria-controls="listbox-id-1" autoComplete="off" role="textbox"
+                          placeholder="Search..." />
+                        <span
+                          class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                          <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      <div id="listbox-id-1" class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
+                        role="listbox">
+                        <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                          <li role="presentation" class="slds-listbox__item">
+                            <div id="option1"
+                              class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                              role="option">
+                              <span class="slds-media__figure slds-listbox__option-icon">
+                                <span class="slds-icon_container slds-icon-standard-account">
+                                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                                  </svg>
+                                </span>
+                              </span>
+                              <span class="slds-media__body">
+                                <span class="slds-listbox__option-text slds-listbox__option-text_entity">Burlington
+                                  Textiles Corp of America</span>
+                                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account •
+                                  Burlington, NC</span>
+                              </span>
+                            </div>
+                          </li>
+                          <li role="presentation" class="slds-listbox__item">
+                            <div id="option2"
+                              class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                              role="option">
+                              <span class="slds-media__figure slds-listbox__option-icon">
+                                <span class="slds-icon_container slds-icon-standard-account">
+                                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                                  </svg>
+                                </span>
+                              </span>
+                              <span class="slds-media__body">
+                                <span class="slds-listbox__option-text slds-listbox__option-text_entity">Dickenson
+                                  plc</span>
+                                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account •
+                                  Lawrence, KS</span>
+                              </span>
+                            </div>
+                          </li>
+                          <li role="presentation" class="slds-listbox__item">
+                            <div id="option3"
+                              class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                              role="option">
+                              <span class="slds-media__figure slds-listbox__option-icon">
+                                <span class="slds-icon_container slds-icon-standard-account">
+                                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                                  </svg>
+                                </span>
+                              </span>
+                              <span class="slds-media__body">
+                                <span class="slds-listbox__option-text slds-listbox__option-text_entity">Edge
+                                  Communications</span>
+                                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account •
+                                  Austin,
+                                  TX</span>
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB NAVIGATION -->
+          <ul class="slds-tabs_default__nav slds-size_1-of-1" role="tablist">
+            <li class="slds-tabs_default__item slds-active" title="Opportunities" role="presentation">
+              <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true"
+                aria-controls="tab-default-1" id="tab-default-1__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container " title="Opportunities">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#builder"></use>
+                    </svg>
+                  </span>
+                </span>Interface</a>
+            </li>
+            <li class="slds-tabs_default__item" title="Opportunities" role="presentation">
+              <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
+                aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container " title="Opportunities">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#custom_apps"></use>
+                    </svg>
+                  </span>
+                </span>Functionality</a>
+            </li>
+            <li class="slds-tabs_default__item" title="Products" role="presentation">
+              <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
+                aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container" title="Products">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#display_rich_text"></use>
+                    </svg>
+                  </span>
+                </span>Layout</a>
+            </li>
+            <li class="slds-tabs_default__item" title="Price Books" role="presentation">
+              <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
+                aria-selected="false" aria-controls="tab-default-4" id="tab-default-4__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container" title="Price Books">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#formula"></use>
+                    </svg>
+                  </span>
+                </span>Calculation</a>
+            </li>
+            <li class="slds-tabs_default__item" title="Contacts" role="presentation">
+              <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
+                aria-selected="false" aria-controls="tab-default-5" id="tab-default-5__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container" title="Contacts">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#approval"></use>
+                    </svg>
+                  </span>
+                </span>Approval</a>
+            </li>
+            <li class="slds-tabs_default__item" title="Contacts" role="presentation">
+              <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
+                aria-selected="false" aria-controls="tab-default-5" id="tab-default-5__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container" title="Contacts">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#home"></use>
+                    </svg>
+                  </span>
+                </span>Adresses</a>
+            </li>
+            <li class="slds-tabs_default__item" title="Contacts" role="presentation">
+              <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
+                aria-selected="false" aria-controls="tab-default-5" id="tab-default-5__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container" title="Contacts">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user"></use>
+                    </svg>
+                  </span>
+                </span>Account</a>
+            </li>
+            <li class="slds-tabs_default__item" title="Opportunities" role="presentation">
+              <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
+                aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container " title="Opportunities">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cart"></use>
+                    </svg>
+                  </span>
+                </span>Order confirmation</a>
+            </li>
+            <li class="slds-tabs_default__item" title="Contacts" role="presentation">
+              <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1"
+                aria-selected="false" aria-controls="tab-default-5" id="tab-default-5__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container" title="Contacts">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#all"></use>
+                    </svg>
+                  </span>
+                </span>Other</a>
+            </li>
+          </ul>
+
+          <!-- Content for Tab 1-->
+          <div id="tab-default-1" class="slds-tabs_default__content slds-p-around_large slds-size_full" role="tabpanel"
+            aria-labelledby="tab-default-1__item">
+
+            <!-- Toolbar Enabled Features-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element slds-grid">
+                  <p class="slds-form-element__label slds-col slds-size_1-of-2 slds-text-align_right slds-align-middle">
+                    Toolbar - enabled
+                    features:</p>
+                  <div class="slds-form-element__control slds-col slds-size_1-of-2 slds-grid slds-wrap">
+
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-170" value="checkbox-170" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-170">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Open group</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-171" value="checkbox-171" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-171">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Switch between edit and print view</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-172" value="checkbox-172" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-172">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Opportunity Sync</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-173" value="checkbox-173" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-173">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Open document options</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-174" value="checkbox-174" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-174">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Allow undo</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-175" value="checkbox-175" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-175">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Allow redo</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-176" value="checkbox-176" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-176">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Structure</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-177" value="checkbox-177" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-177">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Duplicate</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-178" value="checkbox-178" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-178">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Set item as formatted alternative</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-179" value="checkbox-179" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-179">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Set item as alternative</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-180" value="checkbox-180" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-180">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Set sum up</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-181" value="checkbox-181" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-181">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Lock/unlock item</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-182" value="checkbox-182" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-182">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Hide/show item</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-183" value="checkbox-183" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-183">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Move item to trash</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right slds-align-middle">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+
+                <div class="slds-form-element checkbox_showmodified">
+                  <div class="slds-form-element__control">
+                    <div class="slds-checkbox">
+                      <input type="checkbox" name="options" id="checkbox-302" value="checkbox-302" />
+                      <label class="slds-checkbox__label" for="checkbox-302">
+                        <span class="slds-checkbox_faux"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column header - enabled features -->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element slds-grid">
+                  <p class="slds-form-element__label slds-col slds-size_1-of-2 slds-text-align_right slds-align-middle">
+                    Column header -
+                    enabled features</p>
+
+                  <div class="slds-form-element__control slds-col slds-size_1-of-2 slds-grid slds-wrap">
+
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-184" value="checkbox-184" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-184">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Edit column labels</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-185" value="checkbox-185" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-185">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Change column width</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-186" value="checkbox-186" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-186">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Change column order</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-187" value="checkbox-187" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-187">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Show/hide column</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right slds-align-middle">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+              </div>
+              <div class="slds-form-element checkbox_showmodified">
+                  <div class="slds-form-element__control">
+                    <div class="slds-checkbox">
+                      <input type="checkbox" name="options" id="checkbox-303" value="checkbox-303" />
+                      <label class="slds-checkbox__label" for="checkbox-303">
+                        <span class="slds-checkbox_faux"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Row with "Missing Data", Product description cannot be edited, Changed Icon-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element">
+                  <label class="slds-checkbox_toggle slds-grid">
+
+                    <span
+                      class="slds-form-element__label slds-m-bottom_none slds-col slds-text-align_right slds-size_1-of-2">Product
+                      description cannot be edited:</span>
+                    <input type="checkbox" name="checkbox-toggle-14" value="checkbox-toggle-14"
+                      aria-describedby="checkbox-toggle-14" />
+                    <span id="checkbox-toggle-14" class="slds-checkbox_faux_container slds-size_1-of-2"
+                      aria-live="assertive">
+                      <span class="slds-checkbox_faux"></span>
+                      <span class="slds-checkbox_on">Enabled</span>
+                      <span class="slds-checkbox_off">Disabled</span>
+                    </span>
+
+                  </label>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+              </div>
+              <div class="slds-form-element checkbox_showmodified">
+                  <div class="slds-form-element__control">
+                    <div class="slds-checkbox">
+                      <input type="checkbox" name="options" id="checkbox-304" value="checkbox-304" />
+                      <label class="slds-checkbox__label" for="checkbox-304">
+                        <span class="slds-checkbox_faux"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Row with "Missing Data", Product details cannot be edited, Changed Icon-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element">
+                  <label class="slds-checkbox_toggle slds-grid">
+
+                    <span
+                      class="slds-form-element__label slds-m-bottom_none slds-col slds-text-align_right slds-size_1-of-2">Product
+                      details cannot be edited:</span>
+                    <input type="checkbox" name="checkbox-toggle-15" value="checkbox-toggle-15"
+                      aria-describedby="checkbox-toggle-15" />
+                    <span id="checkbox-toggle-15" class="slds-checkbox_faux_container slds-size_1-of-2"
+                      aria-live="assertive">
+                      <span class="slds-checkbox_faux"></span>
+                      <span class="slds-checkbox_on">Enabled</span>
+                      <span class="slds-checkbox_off">Disabled</span>
+                    </span>
+
+                  </label>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+              </div>
+              <div class="slds-form-element checkbox_showmodified">
+                  <div class="slds-form-element__control">
+                    <div class="slds-checkbox">
+                      <input type="checkbox" name="options" id="checkbox-30" value="checkbox-30" />
+                      <label class="slds-checkbox__label" for="checkbox-30">
+                        <span class="slds-checkbox_faux"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Related products available-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element">
+                  <label class="slds-checkbox_toggle slds-grid">
+
+                    <span
+                      class="slds-form-element__label slds-m-bottom_none slds-col slds-text-align_right slds-size_1-of-2">Related
+                      products available:</span>
+                    <input type="checkbox" name="checkbox-toggle-15" value="checkbox-toggle-15"
+                      aria-describedby="checkbox-toggle-15" />
+                    <span id="checkbox-toggle-15" class="slds-checkbox_faux_container slds-size_1-of-2"
+                      aria-live="assertive">
+                      <span class="slds-checkbox_faux"></span>
+                      <span class="slds-checkbox_on">Enabled</span>
+                      <span class="slds-checkbox_off">Disabled</span>
+                    </span>
+
+                  </label>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Items available for users: -->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element slds-grid">
+                  <p class="slds-form-element__label slds-col slds-size_1-of-2 slds-text-align_right slds-align-middle">
+                    Items available
+                    for users:</p>
+
+                  <div class="slds-form-element__control slds-col slds-size_1-of-2 slds-grid slds-wrap">
+
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-187" value="checkbox-187" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-187">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Header</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-188" value="checkbox-188" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-188">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Footer</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-189" value="checkbox-189" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-189">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Text area</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-190" value="checkbox-190" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-190">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Product</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-191" value="checkbox-191" checked="" />
+                          <label class="slds-checkbox__label" onclick="toggleClassChanged()" for="checkbox-191">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Spacer</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-192" value="checkbox-192" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-192">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Horizontal line</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-193" value="checkbox-193" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-193">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Subtotal</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-194" value="checkbox-194" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-194">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Total net</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-195" value="checkbox-195" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-195">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Total gross</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-196" value="checkbox-196" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-196">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">VAT</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-197" value="checkbox-197" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-197">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Group Total net</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-198" value="checkbox-198" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-198">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Group Total gross</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-199" value="checkbox-199" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-199">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Page break</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-200" value="checkbox-200" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-200">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Product details</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-201" value="checkbox-201" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-201">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Product overview</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-202" value="checkbox-202" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-202">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Sum discount</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-203" value="checkbox-203" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-203">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Signature</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-204" value="checkbox-204" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-204">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Image</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-col slds-size_1-of-3">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-205" value="checkbox-205" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-205">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Column heading</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right slds-align-middle">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Row with "Missing Data", Toggle, Changed Icon-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element">
+                  <label class="slds-checkbox_toggle slds-grid">
+
+                    <span
+                      class="slds-form-element__label slds-m-bottom_none slds-col slds-text-align_right slds-size_1-of-2">Toggle
+                      Label</span>
+                    <input type="checkbox" name="checkbox-toggle-13" value="checkbox-toggle-13"
+                      aria-describedby="checkbox-toggle-13" />
+                    <span id="checkbox-toggle-13" class="slds-checkbox_faux_container slds-size_1-of-2"
+                      aria-live="assertive">
+                      <span class="slds-checkbox_faux"></span>
+                      <span class="slds-checkbox_on">Enabled</span>
+                      <span class="slds-checkbox_off">Disabled</span>
+                    </span>
+
+                  </label>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Row with "Missing Data", DropDown, Changed Icon-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element slds-grid">
+                  <label
+                    class="slds-form-element__label slds-col slds-size_1-of-2 slds-text-align_right slds-align-middle"
+                    for="select-01">Select Label</label>
+                  <div class="slds-form-element__control slds-col slds-size_1-of-2">
+                    <div class="slds-select_container">
+                      <select class="slds-select" id="select-01">
+                        <option value="">Please select</option>
+                        <option>Option One</option>
+                        <option>Option Two</option>
+                        <option>Option Three</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right slds-align-middle">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+
+              </div>
+            </div>
+
+            <!-- Row with "Missing Data", Input, Changed Icon-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element slds-grid">
+                  <label
+                    class="slds-form-element__label slds-col slds-size_1-of-2 slds-text-align_right slds-align-middle"
+                    for="text-input-id-1">Additional Fields</label>
+
+                  <div class="slds-form-element__control slds-col slds-size_1-of-2">
+                    <input type="text" id="text-input-id-1" placeholder="" class="slds-input" />
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+              </div>
+            </div>
+
+
+
+            <!-- Devider & How much has Changed Button-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-top_small">
+              <div class="slds-col slds-size_1-of-3">
+              </div>
+              <div class="slds-col slds-size_1-of-3 slds-border_top">
+                <div class="slds-grid slds-m-top_small" style="align-items: center">
+                  <div class="slds-col slds-size_1-of-2 slds-text-align_right slds-p-right_x-small">
+                    <p>4/7 Modified</p>
+                  </div>
+                  <div class="slds-col slds-size_1-of-2 slds-p-left_x-small">
+                    <button class="slds-button slds-button_neutral" id="f42-quote-showModifiedButton">Show
+                      Modified</button>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-col slds-size_1-of-3">
+              </div>
+            </div>
+
+            <!-- Devider & Select All or reset-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-top_small" id="f42-quote-showModified_buttons"
+              style="display: none">
+              <div class="slds-col slds-size_1-of-3">
+              </div>
+              <div class="slds-col slds-size_1-of-3 slds-border_top">
+
+                <div class="slds-grid slds-m-top_small slds-wrap" style="align-items: center">
+                  <div class="slds-col slds-size_1-of-2 slds-text-align_right slds-p-right_x-small">
+                    <button class="slds-button slds-button_neutral" onclick="f42_ShowModifiedSettings">Select All
+                      Modified</button>
+                  </div>
+                  <div class="slds-col slds-size_1-of-2 slds-text-align_left slds-p-left_x-small">
+                    <p>or choose</p>
+                  </div>
+
+                  <div class="slds-col slds-size_1-of-2 slds-text-align_right slds-p-right_x-small slds-m-top_x-large">
+                    <button class="slds-button slds-button_neutral"
+                      id="f42-quote-showModifiedButtonCancel">Cancel</button>
+                  </div>
+                  <div class="slds-col slds-size_1-of-2 slds-text-align_left slds-p-left_x-small slds-m-top_x-large">
+                    <button class="slds-button slds-button_destructive" id="resetbutton">Reset</button>
+                  </div>
+                </div>
+
+              </div>
+              <div class="slds-col slds-size_1-of-3">
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-default-2" class="slds-tabs_default__content slds-hide slds-p-around_large slds-size_full"
+            role="tabpanel" aria-labelledby="tab-default-2__item">
+
+            <!-- Add items by clicking -->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element">
+                  <label class="slds-checkbox_toggle slds-grid">
+
+                    <span
+                      class="slds-form-element__label slds-m-bottom_none slds-col slds-text-align_right slds-size_1-of-2">Add
+                      items by clicking</span>
+                    <input type="checkbox" name="checkbox-toggle-13" value="checkbox-toggle-13"
+                      aria-describedby="checkbox-toggle-13" />
+                    <span id="checkbox-toggle-13" class="slds-checkbox_faux_container slds-size_1-of-2"
+                      aria-live="assertive">
+                      <span class="slds-checkbox_faux"></span>
+                      <span class="slds-checkbox_on">Enabled</span>
+                      <span class="slds-checkbox_off">Disabled</span>
+                    </span>
+
+                  </label>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Load Products on demand: -->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element">
+                  <label class="slds-checkbox_toggle slds-grid">
+
+                    <span
+                      class="slds-form-element__label slds-m-bottom_none slds-col slds-text-align_right slds-size_1-of-2">Load
+                      Products on demand:</span>
+                    <input type="checkbox" name="checkbox-toggle-13" value="checkbox-toggle-13"
+                      aria-describedby="checkbox-toggle-13" />
+                    <span id="checkbox-toggle-13" class="slds-checkbox_faux_container slds-size_1-of-2"
+                      aria-live="assertive">
+                      <span class="slds-checkbox_faux"></span>
+                      <span class="slds-checkbox_on">Enabled</span>
+                      <span class="slds-checkbox_off">Disabled</span>
+                    </span>
+
+                  </label>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Full-screen mode: -->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element">
+                  <label class="slds-checkbox_toggle slds-grid">
+
+                    <span
+                      class="slds-form-element__label slds-m-bottom_none slds-col slds-text-align_right slds-size_1-of-2">Full-screen
+                      mode:</span>
+                    <input type="checkbox" name="checkbox-toggle-13" value="checkbox-toggle-13"
+                      aria-describedby="checkbox-toggle-13" />
+                    <span id="checkbox-toggle-13" class="slds-checkbox_faux_container slds-size_1-of-2"
+                      aria-live="assertive">
+                      <span class="slds-checkbox_faux"></span>
+                      <span class="slds-checkbox_on">Enabled</span>
+                      <span class="slds-checkbox_off">Disabled</span>
+                    </span>
+
+                  </label>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Row with "Missing Data", Format of quotation number, Changed Icon-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element slds-grid">
+                  <label class="slds-form-element__label slds-col slds-size_1-of-2 slds-text-align_right"
+                    for="text-input-id-1">Format of quotation number:</label>
+
+                  <div class="slds-form-element__control slds-col slds-size_1-of-2">
+                    <input type="text" id="text-input-id-1" placeholder="" class="slds-input" />
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Row with "Missing Data", Additional quote fields, Changed Icon-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element slds-grid">
+                  <label class="slds-form-element__label slds-col slds-size_1-of-2 slds-text-align_right"
+                    for="text-input-id-1">Additional quote fields:</label>
+
+                  <div class="slds-form-element__control slds-col slds-size_1-of-2">
+                    <input type="text" id="text-input-id-1" placeholder="" class="slds-input" />
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Row with "Missing Data", Standard signature, Changed Icon-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-bottom_small slds-p-around_x-small"
+              id="f42-quote-settings_changed">
+              <div class="slds-col slds-size_1-of-12">
+                <svg class="slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record_create"></use>
+                </svg>
+              </div>
+
+              <div class="slds-col slds-size_10-of-12 ">
+                <div class="slds-form-element slds-grid">
+                  <label class="slds-form-element__label slds-col slds-size_1-of-2 slds-text-align_right"
+                    for="select-01">Standard signature</label>
+                  <div class="slds-form-element__control slds-col slds-size_1-of-2">
+                    <div class="slds-select_container">
+                      <select class="slds-select" id="select-01">
+                        <option value="">Opportunity Owner</option>
+                        <option>Quote Owner</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-12 slds-text-align_right">
+                <svg class="slds-icon_container slds-icon-action-back slds-icon_small slds-icon_container--circle"
+                  aria-hidden="true" style="fill: #ffffff;">
+                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#back"></use>
+                </svg>
+
+              </div>
+            </div>
+
+            <!-- Devider & How much has Changed Button-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-top_small">
+              <div class="slds-col slds-size_1-of-3">
+              </div>
+              <div class="slds-col slds-size_1-of-3 slds-border_top">
+                <div class="slds-grid slds-m-top_small" style="align-items: center">
+                  <div class="slds-col slds-size_1-of-2 slds-text-align_right slds-p-right_x-small">
+                    <p>4/7 Modified</p>
+                  </div>
+                  <div class="slds-col slds-size_1-of-2 slds-p-left_x-small">
+                    <button class="slds-button slds-button_neutral" id="f42-quote-showModifiedButton">Show
+                      Modified</button>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-col slds-size_1-of-3">
+              </div>
+            </div>
+
+            <!-- Devider & Select All or reset-->
+            <div class="slds-grid slds-wrap slds-size_full slds-m-top_small" id="f42-quote-showModified_buttons"
+              style="display: none">
+              <div class="slds-col slds-size_1-of-3">
+              </div>
+              <div class="slds-col slds-size_1-of-3 slds-border_top">
+
+                <div class="slds-grid slds-m-top_small slds-wrap" style="align-items: center">
+                  <div class="slds-col slds-size_1-of-2 slds-text-align_right slds-p-right_x-small">
+                    <button class="slds-button slds-button_neutral" onclick="f42_ShowModifiedSettings">Select All
+                      Modified</button>
+                  </div>
+                  <div class="slds-col slds-size_1-of-2 slds-text-align_left slds-p-left_x-small">
+                    <p>or choose</p>
+                  </div>
+
+                  <div class="slds-col slds-size_1-of-2 slds-text-align_right slds-p-right_x-small slds-m-top_x-large">
+                    <button class="slds-button slds-button_neutral"
+                      id="f42-quote-showModifiedButtonCancel">Cancel</button>
+                  </div>
+                  <div class="slds-col slds-size_1-of-2 slds-text-align_left slds-p-left_x-small slds-m-top_x-large">
+                    <button class="slds-button slds-button_destructive" id="resetbutton">Reset</button>
+                  </div>
+                </div>
+
+              </div>
+              <div class="slds-col slds-size_1-of-3">
+              </div>
+            </div>
+          </div>
+
+
+          <div id="tab-default-3" class="slds-tabs_default__content slds-hide slds-p-around_large" role="tabpanel"
+            aria-labelledby="tab-default-3__item">
+            <h2>Item Three Content</h2>
+          </div>
+
+
+          <div id="tab-default-4" class="slds-tabs_default__content slds-hide slds-p-around_large" role="tabpanel"
+            aria-labelledby="tab-default-4__item">
+            <h2>Item Four Content</h2>
+          </div>
+
+
+          <div id="tab-default-5" class="slds-tabs_default__content slds-hide slds-p-around_large" role="tabpanel"
+            aria-labelledby="tab-default-5__item">
+            <h2>Item Five Content</h2>
+          </div>
+
+          <!-- Devider & How much has Changed Button-->
+          <div class="slds-size_full slds-m-top_small slds-m-bottom_large">
+
+            <div class="slds-border_top">
+              <div class="slds-grid slds-m-top_large" style="align-items: center">
+                <div class="slds-col slds-size_1-of-2 slds-text-align_right slds-p-right_x-small">
+                  <button class="slds-button slds-button_neutral" id="mainCancel">Cancel</button>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-p-left_x-small">
+                  <button class="slds-button slds-button_success" id="mainSaveChanges">Save Changes</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </main>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>
+    svg4everybody();
+
+  </script>
+
+  <script>
+    /*** Event Listener ***/
+
+    /* EL Radio Button*/
+    let RadioButtons = document.getElementsByClassName("slds-checkbox__label");
+    for (var i = 0; i < RadioButtons.length; i++) {
+      RadioButtons[i].addEventListener("click", addClassCustomSettingsAndSaveBubble);
+    }
+
+    /* EL Toggler*/
+    let ToggleButtons = document.getElementsByClassName("slds-checkbox_toggle");
+    for (var i = 0; i < ToggleButtons.length; i++) {
+      ToggleButtons[i].addEventListener("click", addClassCustomSettingsAndSaveBubble);
+    }
+
+    /* EL Multiselect */
+    let MultiSelectors = document.getElementsByClassName("slds-select");
+    for (var i = 0; i < MultiSelectors.length; i++) {
+      MultiSelectors[i].addEventListener("click", addClassCustomSettingsAndSaveBubble);
+    }
+
+    /* EL Input */
+    let InputFields = document.getElementsByClassName("slds-input");
+    for (var i = 0; i < InputFields.length; i++) {
+      InputFields[i].addEventListener("click", addClassCustomSettingsAndSaveBubble);
+    }
+
+    /* EL Show Modified Button*/
+    let ShowModifiedButton = document.getElementById("f42-quote-showModifiedButton");
+    ShowModifiedButton.addEventListener("click", clickShowModifiedButton);
+
+    /* EL Reset*/
+    let clickResetButton = document.getElementById("resetbutton");
+    clickResetButton.addEventListener("click", pagereload);
+
+    /* EL Show Modified Cancel Button*/
+    let ShowModifiedCancelButton = document.getElementById("f42-quote-showModifiedButtonCancel");
+    ShowModifiedCancelButton.addEventListener("click", clickShowModifiedButton);
+
+    /* EL Main Cancel Button*/
+    let mainCancelButton = document.getElementById("mainCancel");
+    mainCancelButton.addEventListener("click", deleteCustomSettings);
+
+    /* EL Main Save Button*/
+    let mainSaveButton = document.getElementById("mainSaveChanges");
+    mainSaveButton.addEventListener("click", deleteCustomSettings);
+
+
+    /*** Functions ***/
+
+    /* Settings Changed -> Add class CustomSettings & CustomSettings_savebubble */
+    function addClassCustomSettingsAndSaveBubble() {
+      const clickedSettings = event.currentTarget;
+      const clickedSettingsParent = clickedSettings.closest(".slds-size_full");
+
+      if (clickedSettingsParent.classList.contains("CustomSettings")) {
+        clickedSettingsParent.classList.add("CustomSettings_savebubble");
+      } else {
+        clickedSettingsParent.classList.add("CustomSettings_savebubble", "CustomSettings");
+      }
+    }
+
+    /*Show Modified Button & cancel Click*/
+    function clickShowModifiedButton() {
+      const ChangedSettings = document.getElementById("f42-quote-settings_changed");
+      const ShowModifiedButton = document.getElementById("f42-quote-showModifiedButton");
+      const ModifiedButton_section = document.getElementById("f42-quote-showModified_buttons");
+
+      if (ModifiedButton_section.style.display === "none") {
+        ModifiedButton_section.style.display = "flex";
+        ShowModifiedButton.disabled = true;
+        ChangedSettingsShowModified_show();
+        ChangedSettingsShowCheckbox_show();
+
+
+      } else {
+        ModifiedButton_section.style.display = "none";
+        ShowModifiedButton.disabled = false;
+        ChangedSettingsShowModified_hide();
+      }
+    }
+
+    /* Changed Settings Show Checkbox*/
+    function ChangedSettingsShowCheckbox_show() {
+      const CheckboxShowModified = document.getElementsByClassName("checkbox_showmodified");
+
+      for (let i = 0; i < CheckboxShowModified.length; i++) {
+        CheckboxShowModified[i].classList.add("checkbox_showmodified__on");
+      }
+    }
+
+    /* Changed Settings Show Modified*/
+    function ChangedSettingsShowModified_show() {
+      const ChangedSettings = document.getElementsByClassName("CustomSettings");
+
+      for (let i = 0; i < ChangedSettings.length; i++) {
+        ChangedSettings[i].classList.add("f42-quote-settings_changed");
+        ChangedSettings[i].classList.remove("CustomSettings_savebubble");
+
+      }
+    }
+
+    function ChangedSettingsShowModified_hide() {
+      const ChangedSettings = document.getElementsByClassName("CustomSettings");
+
+      for (let i = 0; i < ChangedSettings.length; i++) {
+        ChangedSettings[i].classList.remove("f42-quote-settings_changed");
+        ChangedSettings[i].classList.add("CustomSettings_savebubble");
+
+      }
+    }
+
+
+    /* Save Changes or Cancel*/
+    function deleteCustomSettings() {
+      const ChangedSettings = document.getElementsByClassName("CustomSettings");
+      for (let i = 0; i < ChangedSettings.length; i++) {
+        ChangedSettings[i].classList.remove("f42-quote-settings_changed");
+        ChangedSettings[i].classList.remove("CustomSettings_savebubble");
+        ChangedSettings[i].classList.remove("CustomSettings");
+      }
+    }
+
+    function pagereload() {
+      location.reload();
+    }
+
+
+
+
+
+    /* Brainstorming 
+
+    X. Wenn Einstellung angepasst wird 
+        -> Add Class CustomSettings & CustomSettings_savebubble
+
+    2. Wenn auf Save Changes Button geklickt wird 
+        -> Remove Class CustomSettings_savebubble 
+    
+    3. Wenn Button Show Modified geklickt wird 
+        -> Add Class CustomSettings_show where there already is Class CustomSettings
+            -> Aus Bubbles werden Select Boxen
+            -> Zeilen werden Blau hinterlegt
+    
+    4. Wenn Button Select All Modified geklickt wird
+        -> Alle mit Class CustomSettings werden ausgewählt 
+
+    5. Wenn Button Reset geklickt wird
+        -> Remove Class CustomSettings
+    
+    6 Wenn Button Save Changes
+
+
+
+    */
+
+
+    function ConsolTester() {
+      alert("Alles ROGGER!");
+    }
+
+  </script>
+</body>
+
+</html>

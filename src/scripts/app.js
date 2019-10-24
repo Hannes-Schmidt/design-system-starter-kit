@@ -85,3 +85,4 @@ Array.from(defaultTabs).forEach((tab) => {
 Array.from(scopedTabs).forEach((tab) => {
   tab.addEventListener('click', assignTabEvents, false)
 })
+
